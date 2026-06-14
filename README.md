@@ -32,9 +32,9 @@
 > 장바구니·주문·결제 도메인을 갖춘 e-커머스 백엔드. 대용량 트래픽 상황을 가정한
 > 부하 테스트로 결제 동시성 병목을 진단하고 구조 개선 방안을 도출했습니다.
 
-- **기간 / 인원** · [2025.10 ~ 2026.01] / 5인 팀 프로젝트
-- **원본 저장소** · [kt-cloud-basic-project/shopping](https://github.com/kt-cloud-basic-project/shopping)
-- **기술 스택** · Java 21, Spring Boot 3.5.7, JPA, MySQL, JUnit, OpenAI API, k6
+- **기간 / 인원**  [2025.10 ~ 2026.01] / 5인 팀 프로젝트
+- **원본 저장소**  [kt-cloud-basic-project/shopping](https://github.com/kt-cloud-basic-project/shopping)
+- **기술 스택**  Java 21, Spring Boot 3.5.7, JPA, MySQL, JUnit, OpenAI API, k6
 
 **담당 역할**
 - 장바구니 / 주문 도메인 설계 및 REST API 구현
