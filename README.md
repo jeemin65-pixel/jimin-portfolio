@@ -59,9 +59,9 @@
 > 상담 기록·크레딧·결제를 관리하는 백엔드. 결제 정합성과 크레딧 소진 로직 등
 > "돈이 걸린 흐름"을 정확하게 처리하는 데 집중했습니다.
 
-- **기간 / 인원** · [2026.01 ~ 2026.04] / 15인 팀 프로젝트
-- **원본 저장소** · [8ocket/Backend](https://github.com/8ocket/Backend)
-- **기술 스택** · Java 21, Spring Boot 4.0.1, JPA, PostgreSQL, OAuth 2.0, AWS S3, JUnit
+- **기간 / 인원**  [2026.01 ~ 2026.04] / 15인 팀 프로젝트
+- **원본 저장소**  [8ocket/Backend](https://github.com/8ocket/Backend)
+- **기술 스택**  Java 21, Spring Boot 4.0.1, JPA, PostgreSQL, OAuth 2.0, AWS S3, JUnit
 
 **담당 역할**
 - AI 상담 기록 도메인 설계 및 백엔드 개발 (사건 요약 · 감정 · 행동 제언 관리)
