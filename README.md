@@ -87,7 +87,7 @@
 - **효과** — `요청 금액 == DB 금액 == 토스 승인 금액`이 체인으로 연결되어 금액 정합성을 끝까지 보장, 잘못된 요청은 PG 호출 전에 걸러지므로 불필요한 "승인 → 취소" 왕복 제거 *(개인 리팩토링, 로컬 반영)*
 ---
 
-## 👤 About
+## About
 
 - **George Mason University**, Computational and Data Sciences 학사 (GPA 3.76 / 4.0)
 - **KT Cloud Tech Up 부트캠프** (Backend Development 과정) 수료
