@@ -49,8 +49,8 @@
 
 **AI 챗봇 통합 · 테스트 트러블슈팅**
 - **테스트 격리로 `contextLoads` 에러 해결** — @SpringBootTest가 모든 Bean을 로딩할 때 외부 OpenAI API를 호출하는 DefaultVectorApi가 CI의 API Key 부재로 초기화 실패. Bean의 역할에 따라 격리 방식을 구분해 해결 ([PR #160](https://github.com/kt-cloud-basic-project/shopping/pull/160))
-- FAQService가 필수로 주입받는 VectorApi·ChatApi: 제거 시 컨텍스트 로딩이 깨지므로, 실제 구현체(DefaultVectorApi·DefaultChatApi)를 테스트에서 제외하고 외부 호출이 없는 FakeVectorApi·FakeChatApi로 대체
-- 필수 의존성이 아닌 설정 Bean(OpenAIConfiguration, OpenAICustomAdvisor): @ConditionalOnProperty로 테스트에서 비활성화
+  - FAQService가 필수로 주입받는 VectorApi·ChatApi: 제거 시 컨텍스트 로딩이 깨지므로, 실제 구현체(DefaultVectorApi·DefaultChatApi)를 테스트에서 제외하고 외부 호출이 없는 FakeVectorApi·FakeChatApi로 대체
+  - 필수 의존성이 아닌 설정 Bean(OpenAIConfiguration, OpenAICustomAdvisor): @ConditionalOnProperty로 테스트에서 비활성화
 - **DI 초기화 순서 버그 해결** — `OpenAIProperties`에서 파생되는 `token`이 `@RequiredArgsConstructor` 사용 시 의존성 주입보다 먼저 초기화되며 발생한 에러를, 수동 생성자로 초기화 순서를 명시해 해결 ([PR #160](https://github.com/kt-cloud-basic-project/shopping/pull/160))
 - JUnit 기반 장바구니 / 주문 단위 테스트 작성으로 서비스 레이어 안정성 확보
 
