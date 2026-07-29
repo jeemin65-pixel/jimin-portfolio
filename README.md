@@ -89,12 +89,20 @@
 - **효과** — `요청 금액 == DB 금액 == 토스 승인 금액`이 체인으로 연결되어 금액 정합성을 끝까지 보장, 잘못된 요청은 PG 호출 전에 걸러지므로 불필요한 "승인 → 취소" 왕복 제거 *(개인 리팩토링, 로컬 반영)*
 ---
 
-## About
+## Experience
 
-- **George Mason University**, Computational and Data Sciences 학사 (GPA 3.76 / 4.0)
-- **KT Cloud Tech Up 부트캠프** (Backend Development 과정) 수료
-- **데이터 직무 (약 2년 10개월)** · 공개 데이터 수집, 중복 데이터 제거 및 결측 데이터 보완, 제품 데이터 입력 및 네이밍 컨벤션 구축, GCP Cloud Function 기반 데이터 변환 자동화
-- **SQL 과목 조교(TA)** · 과제 채점 및 멘토링
+- **National Capital Flag (NCF)** (2024.10–2025.05) · 제품 데이터 입력 및 네이밍 컨벤션 구축, 약 20,000건 제품 데이터 표준화 (NetSuite ERP)
+- **GMU Schar School** (2024.02–2024.10) · 공개 데이터 수집, 중복 데이터 제거 및 결측 데이터 보완 (Shadow Influence Project)
+- **XAI Land** (2023.02–2023.06) · GCP Cloud Function 기반 데이터 변환 자동화 (csv→txt)
+- **GMU** · SQL 과목 조교(TA), 과제 채점 및 멘토링
+
+## Education
+
+- George Mason University, Computational and Data Sciences 학사 (GPA 3.76 / 4.0)
+- KT Cloud Tech Up 부트캠프 (Backend Development 과정) 수료
+
+## Language
+
 - English (Business Level)
 
 <!--
