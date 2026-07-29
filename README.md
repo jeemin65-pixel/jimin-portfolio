@@ -91,10 +91,10 @@
 
 ## Experience
 
-- **National Capital Flag (NCF)** (2024.10–2025.05) · 제품 데이터 입력 및 네이밍 컨벤션 구축, 약 20,000건 제품 데이터 표준화 (NetSuite ERP)
-- **GMU Schar School** (2024.02–2024.10) · 공개 데이터 수집, 중복 데이터 제거 및 결측 데이터 보완 (Shadow Influence Project)
-- **XAI Land** (2023.02–2023.06) · GCP Cloud Function 기반 데이터 변환 자동화 (csv→txt)
-- **GMU** · SQL 과목 조교(TA), 과제 채점 및 멘토링
+- **National Capital Flag** (2024.10–2025.05): 제품 데이터 입력 및 네이밍 컨벤션 구축, 약 20,000건 제품 데이터 표준화 (NetSuite ERP)
+- **GMU Schar School** (2024.02–2024.10): 공개 데이터 수집, 중복 데이터 제거 및 결측 데이터 보완 (Shadow Influence Project)
+- **XAI Land** (2023.02–2023.06): GCP Cloud Function 기반 데이터 변환 자동화 (csv→txt)
+- **Teaching Assistant** (2024.01-2024.05): SQL 과목 조교, 과제 채점 및 멘토링
 
 ## Education
 
