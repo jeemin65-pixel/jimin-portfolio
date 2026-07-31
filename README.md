@@ -4,7 +4,7 @@
 
 미국 현지 기업 National Capital Flag을 포함해 데이터 직무를 약 1년 9개월 수행했고(데이터 표준화, 데이터 변환 자동화, 데이터 리서치), 현재는 Spring 기반으로 결제 정합성과 부하 테스트 기반 성능 진단 등 정확하고 안정적으로 동작하는 서버에 집중하고 있습니다.
 
-**Email** · [jeemin065@gmail.com] &nbsp;|&nbsp; 💻 **GitHub** · [@jeemin65-pixel](https://github.com/jeemin65-pixel)
+**Email** · jeemin065@gmail.com &nbsp;|&nbsp; 💻 **GitHub** · [@jeemin65-pixel](https://github.com/jeemin65-pixel)
 
 > 이 저장소는 부트캠프 팀 프로젝트 2건을 정리한 포트폴리오입니다.
 > 각 프로젝트의 상세 코드는 원본 팀 저장소 링크에서 확인하실 수 있습니다.
