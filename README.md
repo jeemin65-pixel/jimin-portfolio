@@ -1,5 +1,5 @@
 # 전지민 (Jimin Jeon) — Backend Developer Portfolio
-
+[🇬🇧 English](README.en.md) | **🇰🇷 한국어**
 **데이터 직무를 거쳐 백엔드로 전환한, 영어 협업이 가능한 개발자입니다.**
 
 미국 현지 기업 National Capital Flag을 포함해 데이터 직무를 약 1년 9개월 수행했고(데이터 표준화, 데이터 변환 자동화, 데이터 리서치), 현재는 Spring 기반으로 결제 정합성과 부하 테스트 기반 성능 진단 등 정확하고 안정적으로 동작하는 서버에 집중하고 있습니다.
