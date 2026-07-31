@@ -48,7 +48,7 @@
 - 부하 테스트 결과 (Before)
   - VU 30(낮은 동시성) 각 1건 → 결제 성공 0건, 전 요청 30초 타임아웃 (p95 = 30.02s)
   - 재고 변화 없음 (150 → 150, 차감 0건)
-  - 서버 로그: Connection is not available, timed out after 30s (total=10, active=10, idle=0, waiting=14)
+  - 서버 로그: 'Connection is not available, timed out after 30s (total=10, active=10, idle=0, waiting=14)'
   - 원인: completePayment(@Transactional)가 커넥션 A 점유 중 재고 차감 시 낙관적 락(@Version) 충돌 → 롤백이 REQUIRES_NEW로 커넥션 B를 추가 요구 → 풀(10개) 소진 상태에서 A를 놓지 않고 B 대기하며 교착. 부하가 아닌 트랜잭션/롤백 구조가 원인이며 풀 확대로는 재발
   - 개선 방향: 롤백의 REQUIRES_NEW 구조 재설계 + 동시성 제어(분산/비관적 락) 및 티켓팅 대기열 도입을 팀과 논의 중. (설계 단계)
 
