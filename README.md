@@ -1,5 +1,5 @@
 # 전지민 (Jimin Jeon) — Backend Developer Portfolio
-[🇬🇧 English](README.en.md) | **🇰🇷 한국어**
+[🇺🇸English](README.en.md) | **🇰🇷 한국어**
 
 **데이터 직무를 거쳐 백엔드로 전환한, 영어 협업이 가능한 개발자입니다.**
 
