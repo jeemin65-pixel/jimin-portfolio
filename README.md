@@ -40,19 +40,20 @@
 - 장바구니 / 주문 도메인 설계 및 REST API 구현
 - OpenAI API 기반 FAQ 챗봇 기능 적용 (시스템 프롬프트 설계, 벡터 스토어 연동 설정)
 - k6 부하 테스트 설계 및 수행
-
+  
 **핵심 트러블슈팅 — 결제 동시성 데드락 진단**
 - 대용량 트래픽을 가정한 k6 부하 테스트 중, 결제 동시 처리 시점에 응답이 멈추는 현상 확인
-- 원인 분석: 이미 점유 중인 `@Transactional` 커넥션 안에서 `REQUIRES_NEW`로 새 트랜잭션을 요청하면서 **HikariCP 커넥션 풀 고갈 → 데드락** 발생
-- 단순 풀 사이즈 증설이 아니라 **트랜잭션 경계 재설계**가 필요하다는 결론 도출
-- 부하 테스트 결과 (Before)
+
+- **부하 테스트 결과 (Before)**
   - VU 30(낮은 동시성) 각 1건 → 결제 성공 0건, 전 요청 30초 타임아웃 (p95 = 30.02s)
   - 재고 변화 없음 (150 → 150, 차감 0건)
   - 서버 로그: `Connection is not available, timed out after 30s (total=10, active=10, idle=0, waiting=14)`
-  - **원인 — 커넥션 풀 데드락**
-    - 커넥션 A 점유(`completePayment`) → 재고 차감 중 낙관적 락 충돌 → 롤백이 `REQUIRES_NEW`로 커넥션 B 요구 → 풀 소진(10개) 상태에서 A 유지·B 대기 → 교착
-    - 부하가 아니라 트랜잭션/롤백 구조가 원인. 커넥션 풀을 늘려도 동시성이 오르면 재발.
-  - 개선 방향: 롤백의 REQUIRES_NEW 구조 재설계 + 동시성 제어(분산/비관적 락) 및 티켓팅 대기열 도입을 팀과 논의 중. (설계 단계)
+
+- **원인 — 커넥션 풀 데드락**
+  - 커넥션 A 점유(`completePayment`) → 재고 차감 중 낙관적 락(`@Version`) 충돌 → 롤백이 `REQUIRES_NEW`로 커넥션 B 요구 → 풀 소진(10개) 상태에서 A 유지·B 대기 → 교착
+  - 부하가 아니라 롤백의 `REQUIRES_NEW` 구조가 원인. 커넥션 풀을 늘려도 동시성이 오르면 재발.
+
+- **개선 방향** — 롤백의 `REQUIRES_NEW` 구조 재설계 + 동시성 제어(분산/비관적 락) 및 티켓팅 대기열 도입을 팀과 논의 중. *(설계 단계)*
 
 **AI 챗봇 통합 · 테스트 트러블슈팅**
 - **테스트 격리로 `contextLoads` 에러 해결** — @SpringBootTest가 모든 Bean을 로딩할 때 외부 OpenAI API를 호출하는 DefaultVectorApi가 CI의 API Key 부재로 초기화 실패. Bean의 역할에 따라 격리 방식을 구분해 해결 ([PR #160](https://github.com/kt-cloud-basic-project/shopping/pull/160))
