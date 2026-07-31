@@ -1,6 +1,6 @@
 # Jimin Jeon — Backend Developer Portfolio
 
-**English** | [한국어](README.md)
+**English** | [한국어/Korean Version](README.md)
 
 **A backend developer with a data background and the ability to collaborate in English.**
 
